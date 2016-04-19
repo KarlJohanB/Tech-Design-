@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- import some bootstrap css stylesheets, which we will use further down -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    {% if title %}
+        <title>{{title}} - Bucket lists</title>
+    {% else %}
+        <title>Bucket lists</title>
+    {% endif %}
+
+</head>
+
+<!--<link href="../static/signup.css" rel="stylesheet">
+-->
+<body>
+    <div class="col-md-4"></div>
+        <div class="col-md-4" id="loginDiv">
+                <h1>Multi Activation Tool</h1>
+                <form class="form-signin" method="post">
+                    <label for="inputName" class="sr-only">Name</label>
+                    <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="Sign up">
+                    {% if success == True %}
+                        <h1>Successfully registrered</h1>
+                    {% elif success == False %}
+                        <h1>Failed to register</h1>
+                    {%endif %}
+              </form>
+        </div>
+    <div class="col-md-4"></div>
+</body>
+<!-- end the block-->
+</html>
